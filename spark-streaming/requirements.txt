@@ -1,0 +1,7 @@
+pyspark==3.5.0
+kafka-python==2.0.2
+findspark==2.0.1
+psycopg2-binary==2.9.7
+cassandra-driver==3.28.0
+hdfs3==0.3.1
+pyhive==0.7.0
