@@ -1,0 +1,19 @@
+{
+  "name": "employee-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "postgres",
+    "database.password": "postgres",
+    "database.dbname": "streaming_db",
+    "database.server.name": "employee-server",
+    "table.include.list": "public.employees,public.employee_activities",
+    "plugin.name": "pgoutput",
+    "slot.name": "employee_slot",
+    "publication.name": "employee_publication",
+    "topic.prefix": "employee-server",
+    "schema.history.internal.kafka.bootstrap.servers": "kafka:29092",
+    "schema.history.internal.kafka.topic": "employee-schema-changes"
+  }
+}

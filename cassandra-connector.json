@@ -1,0 +1,17 @@
+{
+  "name": "cassandra-source-connector",
+  "config": {
+    "connector.class": "com.datastax.oss.kafka.source.CassandraSourceConnector",
+    "tasks.max": "1",
+    "contactPoints": "cassandra",
+    "port": "9042",
+    "localDc": "datacenter1",
+    "keyspace": "streaming_ks",
+    "table": "employee_activities",
+    "topicName": "cassandra-activities",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false",
+    "value.converter.schemas.enable": "false"
+  }
+}
